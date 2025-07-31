@@ -1,0 +1,426 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(120deg, #10131b 0%, #161725 100%);
+  color: #f1f3f7;
+  min-height: 100vh;
+  transition: background 0.5s, color 0.5s;
+}
+.comet-theme-toggle {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 1000;
+  background: #1a1f25;
+  color: #1de3c8;
+  border-radius: 1.2em;
+  border: none;
+  font-size: 1.75em;
+  line-height: 1;
+  padding: 0.25em 0.45em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #0ff4;
+}
+.comet-header {
+  background: rgba(10, 17, 39, 0.98);
+  padding: 1.2em 0;
+  box-shadow: 0 2px 20px #0ff2;
+}
+.comet-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2.5em;
+}
+.comet-navlink {
+  color: #b3fffb;
+  text-decoration: none;
+  font-size: 1.15em;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  padding: 0.52em 1em;
+  border-radius: 7px;
+  transition: background 0.22s, color 0.22s;
+}
+.comet-navlink:hover,
+.comet-navlink.active {
+  background: linear-gradient(90deg, #3555ff55, #05ffd355);
+  color: #fff;
+}
+.comet-section {
+  padding: 4em 0 3em;
+  opacity: 0;
+  transform: translateY(60px) scale(0.98);
+  transition: all 0.77s cubic-bezier(0.13, 0.65, 0.5, 1.05);
+  background: none;
+}
+.comet-section.visible {
+  opacity: 1;
+  transform: none;
+}
+.comet-section--accent {
+  background: linear-gradient(100deg, #191532 20%, #140e25 100%);
+}
+.comet-heading {
+  color: #6cf9ff;
+  text-shadow: 0 1px 10px #1e78ff80;
+  font-size: 2.15em;
+  margin-bottom: 1.3em;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+.comet-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+.comet-container--center {
+  text-align: center;
+}
+.comet-lead {
+  font-size: 1.23em;
+  color: #8fdcff;
+  margin: 1em 0 2em;
+}
+.comet-avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  box-shadow: 0 4px 28px #09f8d219, 0 0 36px #48f3df13;
+  display: block;
+  margin: 0 auto 1em;
+  object-fit: cover;
+  border: 3px solid #2aa9ff;
+}
+
+/* ====== Skill Chips ====== */
+.comet-chiplist {
+  display: flex;
+  justify-content: center;
+  gap: 1.1em;
+  list-style: none;
+  padding: 0;
+  margin: 2.5em 0 0 0;
+}
+.comet-chip {
+  border: none;
+  font-weight: 700;
+  font-size: 1.08em;
+  position: relative;
+  transition: transform 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  border-radius: 99px;
+  padding: 0.4em 1.2em;
+  margin: 0 3px;
+  box-shadow: 0 2px 16px #03fde225;
+  text-shadow: 0 1px 8px #1df7d9cc;
+  z-index: 1;
+}
+.comet-chip:hover,
+.comet-chip:focus {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 0 24px #fff7, 0 2px 14px #0ff9;
+  z-index: 2;
+}
+.comet-chip.uiux {
+  background: linear-gradient(60deg, #f7b733, #fc4a1a 85%);
+  color: #fff;
+  box-shadow: 0 2px 8px #fc4a1a33;
+}
+.comet-chip.js {
+  background: linear-gradient(60deg, #f8ff60, #fcb900 85%);
+  color: #222;
+  box-shadow: 0 2px 8px #fcf83055;
+}
+.comet-chip.react {
+  background: linear-gradient(60deg, #00d8ff, #5faafc 85%);
+  color: #fff;
+  box-shadow: 0 2px 8px #00eaff55;
+}
+.comet-chip.node {
+  background: linear-gradient(60deg, #6db33f, #0a3901 85%);
+  color: #fff;
+  box-shadow: 0 2px 8px #6db33f44;
+}
+.comet-chip.mongo {
+  background: linear-gradient(60deg, #66aa50, #21eb9e 85%);
+  color: #0b2c1a;
+  box-shadow: 0 2px 8px #00ff9033;
+}
+.comet-chip.express {
+  background: linear-gradient(60deg, #d3d3d3 30%, #818181 100%);
+  color: #0a0a0a;
+  box-shadow: 0 2px 8px #fff5;
+}
+.comet-chip.css {
+  background: linear-gradient(60deg, #5179ff 0%, #0be7f7 90%);
+  color: #fff;
+  box-shadow: 0 2px 8px #00dfff44;
+}
+/* Animated Glow for UI/UX */
+.comet-chip.uiux:hover {
+  animation: comet-glow-uiux 0.9s infinite alternate;
+}
+@keyframes comet-glow-uiux {
+  from {
+    filter: drop-shadow(0 0 0px #fc4a1a);
+  }
+  to {
+    filter: drop-shadow(0 0 12px #fffb10cc);
+  }
+}
+
+/* ====== Social and Button Styles ====== */
+.comet-social-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1.4em;
+  margin: 2em 0 0 0;
+}
+.comet-btn-social {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  background: linear-gradient(90deg, #1019b8, #0cf7e7);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.16em;
+  border-radius: 7px;
+  padding: 0.5em 1.4em;
+  text-decoration: none;
+  box-shadow: 0 1px 10px #0ff9;
+  transition: background 0.18s, box-shadow 0.18s;
+}
+.comet-btn-social.github {
+  background: linear-gradient(90deg, #313131, #22253e);
+}
+.comet-btn-social.linkedin {
+  background: linear-gradient(90deg, #2375cc, #1361a2);
+}
+.comet-btn-social:hover {
+  background: linear-gradient(90deg, #0cf7e7, #1019b8);
+}
+.comet-contact-links {
+  margin-top: 2em;
+}
+
+/* ====== Testimonial & Card Styles ====== */
+.comet-testimonials {
+  margin: 2.2em 0 0 0;
+}
+.comet-testimonials blockquote {
+  border-left: 4px solid #0cf7e7;
+  margin: 1.5em auto;
+  padding: 1em 1.2em;
+  max-width: 480px;
+  background: rgba(40, 65, 105, 0.19);
+  border-radius: 10px;
+  box-shadow: 0 1px 10px #04fdff12;
+  color: #c7f7ff;
+  font-style: italic;
+}
+.comet-testimonials blockquote span {
+  display: block;
+  color: #8fdcff;
+  font-size: 0.95em;
+  font-weight: 600;
+  margin-top: 0.4em;
+}
+.comet-featured-card {
+  margin: 0 auto 2.2em auto;
+}
+.comet-featured-card .comet-card {
+  border: 2px solid #0cf7e7;
+  box-shadow: 0 8px 32px #03fde299, 0 2px 24px #0ff7;
+}
+.comet-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.9em;
+  margin-top: 2em;
+  justify-content: center;
+}
+.comet-card {
+  background: linear-gradient(110deg, #16192c 80%, #23335f 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 42px #1cf2ff1a, 0 1px 16px #08ffb455;
+  padding: 2em 1.6em 2em;
+  width: 320px;
+  max-width: 100%;
+  min-height: 200px;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-left: 4px solid #0ff;
+  transition: transform 0.19s;
+  position: relative;
+  overflow: hidden;
+}
+.comet-card-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.95em;
+  object-fit: cover;
+  min-height: 98px;
+  box-shadow: 0 4px 35px #11d1ff23;
+}
+.comet-card:hover {
+  transform: scale(1.04) translateY(-2px);
+  box-shadow: 0 12px 38px #08fff466, 0 1px 60px #1df2f655;
+}
+
+/* ====== Form Styles ====== */
+.comet-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 440px;
+  margin: 0 auto 1.8em;
+  gap: 1em;
+}
+.comet-form-row {
+  display: flex;
+  gap: 1em;
+}
+.comet-form input[type="text"],
+.comet-form input[type="email"] {
+  min-width: 0;
+}
+.comet-form button {
+  font-size: 1.08em;
+}
+.comet-input {
+  padding: 1.1em;
+  border: 1px solid #293169;
+  border-radius: 8px;
+  font-size: 1.11em;
+  background: #1a2250;
+  color: #e3feff;
+  font-family: inherit;
+  box-shadow: 0 2px 7px #08fff411;
+}
+.comet-input:focus {
+  outline: 2px solid #14fcda;
+  border-color: #28bfff;
+  background: #151b39;
+}
+.comet-link {
+  color: #41e6fc;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.18s;
+}
+.comet-link:hover {
+  color: #00ffff;
+  text-shadow: 0 1px 10px #26fcf5cc;
+}
+.comet-footer {
+  background: rgba(10, 17, 39, 1);
+  color: #c6fdff;
+  text-align: center;
+  padding: 1.3em 0;
+  font-size: 1.06em;
+  margin-top: 2.8em;
+  border-top: 2px solid #343f7d;
+  letter-spacing: 0.02em;
+}
+/* Starfield */
+.comet-star {
+  position: fixed;
+  pointer-events: none;
+}
+/* Theme switch styling */
+body.light-theme {
+  background: linear-gradient(120deg, #f6fbff 0%, #e5eaf3 100%);
+  color: #21263f;
+}
+body.light-theme .comet-section--accent {
+  background: #dbefff;
+}
+body.light-theme .comet-card {
+  background: #fff;
+  color: #21263f;
+  border-left: 4px solid #2aa9ff;
+}
+body.light-theme .comet-featured-card .comet-card {
+  background: #f1f7ff;
+}
+body.light-theme .comet-navlink {
+  color: #0067c6;
+}
+@media (max-width: 900px) {
+  .comet-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .comet-card {
+    width: 100%;
+  }
+  .comet-featured-card {
+    margin-bottom: 1.2em;
+  }
+}
+@media (max-width: 600px) {
+  .comet-container {
+    padding: 0 0.7em;
+  }
+  .comet-section {
+    padding: 2.2em 0 1.4em;
+  }
+  .comet-avatar {
+    width: 80px;
+    height: 80px;
+  }
+  .comet-heading {
+    font-size: 1.25em;
+  }
+  .comet-form-row {
+    flex-direction: column;
+    gap: 0.7em;
+  }
+}
+body,
+html {
+  cursor: none !important;
+} /* Hide system cursor */
+
+.comet-cursor-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #00ffe9 70%, #347cff 100%);
+  box-shadow: 0 0 16px #37fcffcc, 0 0 6px #00ffe944;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: background 0.14s, box-shadow 0.17s;
+  will-change: left, top;
+  mix-blend-mode: lighten;
+}
+.comet-cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 2.5px solid #24fff3;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: border-color 0.2s, box-shadow 0.2s, width 0.13s, height 0.13s;
+  box-shadow: 0 0 32px 0 #0efce94a;
+  mix-blend-mode: lighten;
+  opacity: 0.92;
+}
+.comet-cursor-ring.active {
+  width: 62px;
+  height: 62px;
+  border-color: #fff;
+  box-shadow: 0 0 24px 6px #26ebffbb, 0 0 52px 0 #fff6;
+  opacity: 1;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Your Name – Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Your Name. Designer, developer, UI/UX."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <button
+      id="themeToggle"
+      aria-label="Toggle theme"
+      class="comet-theme-toggle"
+    >
+      <span id="themeIcon">🌙</span>
+    </button>
+    <header class="comet-header">
+      <nav class="comet-nav" aria-label="Primary navigation">
+        <a href="#about" class="comet-navlink">About</a>
+        <a href="#projects" class="comet-navlink">Projects</a>
+        <a href="#contact" class="comet-navlink">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <!-- ABOUT SECTION -->
+      <section id="about" class="comet-section comet-section--accent">
+        <div class="comet-container comet-container--center">
+          <img
+            src="https://i.pravatar.cc/130?img=7"
+            alt="Profile photo of Roshan V"
+            class="comet-avatar"
+          />
+          <h1>ROSHAN V</h1>
+          <h3 style="margin-top: 0.5em; color: #22ffec">
+            Full-Stack Developer
+          </h3>
+          <p class="comet-lead">
+            Full-stack developer based in [Your Location], passionate about
+            building robust web apps from design to deployment.<br />
+            Studying at
+            <strong>Nextwave Institute of Advanced Technology</strong>.
+          </p>
+          <ul class="comet-chiplist">
+            <li class="comet-chip uiux">🎨 UI/UX</li>
+            <li class="comet-chip js">⚡ JavaScript</li>
+            <li class="comet-chip react">⚛️ React</li>
+            <li class="comet-chip node">🌱 Node.js</li>
+            <li class="comet-chip mongo">🍃 MongoDB</li>
+            <li class="comet-chip express">🚀 Express</li>
+            <li class="comet-chip css">🎨 CSS</li>
+          </ul>
+
+          <div class="comet-social-btns">> ></div>
+        </div>
+        <div class="comet-testimonials">
+          <blockquote>
+            “A pleasure to work with — fast, creative, and reliable!”<br />
+            <span>— Nextwave Institute of Advanced Technology</span>
+          </blockquote>
+          <blockquote>
+            “Their portfolio is simply stellar.”<br />
+            <span>— Happy Client</span>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="comet-section comet-section--accent">
+        <div class="comet-container comet-container--center">
+          <h2 class="comet-heading">Let’s Connect</h2>
+          <p class="comet-lead">
+            Interested in teaming up, hiring, or just have a question? send me
+            an email.<br />
+            I reply within 24–48 hours!
+          </p>
+
+          <div class="comet-social-btns" style="justify-content: center">
+            <a
+              href="https://github.com/officila11615"
+              class="comet-btn-social github"
+              target="_blank"
+              rel="noopener"
+              >GitHub</a
+            >
+
+            >
+            <a
+              href="https://www.linkedin.com/in/roshan-v-b7666a377?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              class="comet-btn-social linkedin"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+            >
+          </div>
+          <p style="margin-top: 1.5em">
+            <strong>Email:</strong>
+            <a href="mailto:unofficial11615@gmail.com" class="comet-link"
+              >unofficial11615@gmail.com</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="comet-footer">
+      &copy; <span id="year"></span> roshan v. Built with Comet style.<br />
+      <small>Portfolio enhanced with <b>Comet Assistant</b> 🤖</small>
+    </footer>
+    <script type="module" src="./index.mjs"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
