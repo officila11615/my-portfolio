@@ -51,9 +51,9 @@
             <span>— Nextwave Institute of Advanced Technology</span>
           </blockquote>
           <blockquote>
-            "Outstanding work! Really impressed with the quality."
+            "Roshan delivered beyond expectations. Highly recommended!"
             <br />
-            <span>— Client feedback</span>
+            <span>— Happy Client</span>
           </blockquote>
         </div>
       </section>
@@ -62,15 +62,10 @@
       <section id="projects" class="comet-section">
         <div class="comet-container">
           <h2 class="comet-heading">Featured Projects</h2>
-          <p class="comet-lead">
-            A selection of projects I've worked on, showcasing different skills
-            and technologies.
-          </p>
-          
-          <!-- NOTEFLOW PROJECT - ENHANCED VERSION -->
-          <div class="comet-project comet-project--featured">
-            <img src="./noteflow-preview.png" alt="Noteflow project preview" class="comet-project-image" />
-            <div class="comet-project-content">
+          <div class="comet-projects-grid">
+            <!-- NOTEPAD PROJECT CARD -->
+            <div class="comet-project" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3); color: white; margin-bottom: 2rem;">
+              <img src="./notepad_app.png" alt="Notepad Application Preview" class="comet-project-image" style="width: 100%; max-width: 400px; height: auto; border-radius: 10px; margin-bottom: 1.5rem; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); display: block; margin-left: auto; margin-right: auto;" />
               <h3 class="comet-project-title" style="font-weight: bold; font-size: 1.8rem; color: #22ffec; margin-bottom: 1rem;">
                 📝 Noteflow
               </h3>
@@ -93,7 +88,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -127,8 +121,7 @@
       © <span id="year"></span> roshan v. Built with Comet style. <br />
       Portfolio enhanced with Comet Assistant 🤖
     </footer>
-    <script src="./index.mjs" type="module"></script>
-    <script>
+    <script src="./index.mjs" type="module">
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
