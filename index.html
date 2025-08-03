@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <title>Your Name – Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Portfolio of Your Name. Designer, developer, UI/UX." />
     <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
+</head>
+<body>
     <button id="themeToggle" aria-label="Toggle theme" class="comet-theme-toggle">
       <span id="themeIcon">🌙</span>
     </button>
@@ -51,9 +51,10 @@
             <span>— Nextwave Institute of Advanced Technology</span>
           </blockquote>
           <blockquote>
-            "Roshan delivered beyond expectations. Highly recommended!"
+            "Roshan delivers excellent results and is always willing to go the
+            extra mile."
             <br />
-            <span>— Happy Client</span>
+            <span>— Satisfied Client</span>
           </blockquote>
         </div>
       </section>
@@ -61,17 +62,16 @@
       <!-- PROJECTS SECTION -->
       <section id="projects" class="comet-section">
         <div class="comet-container">
-          <h2 class="comet-heading">Featured Projects</h2>
-          <div class="comet-projects-grid">
-            <!-- NOTEPAD PROJECT CARD -->
+          <h2 class="comet-heading">Recent Work</h2>
+          <div class="comet-projects">
+            <!-- Project 1: Noteflow -->
             <div class="comet-project" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3); color: white; margin-bottom: 2rem;">
               <img src="./notepad_app.png" alt="Notepad Application Preview" class="comet-project-image" style="width: 100%; max-width: 400px; height: auto; border-radius: 10px; margin-bottom: 1.5rem; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); display: block; margin-left: auto; margin-right: auto;" />
               <h3 class="comet-project-title" style="font-weight: bold; font-size: 1.8rem; color: #22ffec; margin-bottom: 1rem;">
                 📝 Noteflow
               </h3>
-              <p class="comet-project-description" style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 1rem; border-radius: 8px; border-left: 4px solid #22ffec;">
-                <strong>A modern note-taking application</strong> built with React and Node.js. Features <em>real-time synchronization</em>, 
-                <strong>markdown support</strong>, and an <em>intuitive user interface</em> for organizing thoughts and ideas efficiently.
+              <p class="comet-project-description" style="color: black;">
+                A modern note-taking application built with React and Node.js. Features real-time synchronization, markdown support, and an intuitive user interface for organizing thoughts and ideas efficiently.
               </p>
               <div class="comet-project-tech" style="margin-bottom: 2rem;">
                 <span class="comet-chip react" style="background: linear-gradient(135deg, #61dafb, #21759b); color: white; font-weight: bold; padding: 0.5rem 1rem; margin: 0.25rem; border-radius: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">⚛️ React</span>
@@ -124,5 +124,5 @@
     <script src="./index.mjs" type="module">
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-  </body>
+</body>
 </html>
